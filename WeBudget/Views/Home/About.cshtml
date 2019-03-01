@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>MуBudget</title>
+    <link rel="stylesheet" href="~/Content/styles.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+
+
+<style>
+
+    .fig {
+        text-align: center; /* Выравнивание по центру */
+    }
+
+
+    .center {
+        width: 700px; /* Ширина элемента в пикселах */
+        padding: 10px 250px;
+        /* Поля вокруг текста */
+        margin: 0; /* Выравниваем по центру */
+    }
+</style>
+
+
+
+<div class="container">
+    <div id="heading">
+        <h1>О сайте</h1>
+    </div>
+</div>
+
+
+<div class="container">
+    <h2>
+        Пейзажи и портреты, репортажные городские съемки и фотографии представителей флоры и фауны, натюрморты и гламурные фотосессии — в галереях столицы можно увидеть произведения фотохудожников, работающих во всех жанрах и направлениях. Выставочные центры дают зрителям уникальную возможность познакомиться с выдающимися коллекциями, ресурсами и технологиями, а авторам — творческую площадку для диспутов и развития.
+    </h2>
+</div>
+<div class="left">
+
+    <img src="~/img/zakat.jpg"
+         width="250" height="250" alt="Фотография">
+
+</div>

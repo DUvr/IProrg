@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Table";
+}
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>MуBudget</title>
+    <link rel="stylesheet" href="~/Content/styles.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <title>Выравнивание фотографии по центру</title>
+</head>
+
+
+<style>
+
+    .fig {
+        text-align: center; /* Выравнивание по центру */
+    }
+
+
+    .center {
+        width: 700px; /* Ширина элемента в пикселах */
+        padding: 10px 250px;
+        /* Поля вокруг текста */
+        margin: 0; /* Выравниваем по центру */
+    }
+</style>
+
+
+
+
+
+
+<div class="center">
+    <div id="heading">
+        <h1> ЦЕНЫ</h1>
+    </div>
+</div>
+
+
+<aside>
+    <nav>
+        <ul class="aside-menu">
+            <li class="active">ЦЕНЫ</li>
+
+
+        </ul>
+    </nav>
+</aside>
+
+
+
+<section>
+    <table border="1">
+        <tr>
+            <th>Услуга</th>
+            <th>Цена</th>
+        </tr>
+        <tr>
+            <td>Публикация фотографий</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Реклама фотографа</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Публикация истории</td>
+            <td>700</td>
+        </tr>
+    </table>
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "CreatePhoto";
+}
+
+
+@model WeBudget.Models.Photo
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .fig {
+        text-align: center; /* Выравнивание по центру */
+    }
+
+
+    .center {
+        width: 700px; /* Ширина элемента в пикселах */
+        padding: 10px 250px;
+        /* Поля вокруг текста */
+        margin: 0; /* Выравниваем по центру */
+        font-size: 14px !important;
+    }
+</style>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>MуBudget</title>
+	<link rel="stylesheet" href="~/Content/styles.css" type="text/css" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css" />
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	<title>Выравнивание фотографии по центру</title>
+</head>
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<body>
+   
+
+
+    <div class="container">
+        <h2>Добавить Запись</h2>
+        <p>
+            <script type="text/javascript">
+                function checkForm() {
+                    var regex = new RegExp("^(0[1-9]|[12][0-9]|3[01])$"); 
+                    var Day = $('#Day').val();
+                    var regex1 = new RegExp("^(0[1-9]|1[012])$"); 
+                    var Month = $('#Month').val();
+                    var regex2 = /\d{1,10}/;  
+                    var Sum = $('#Sum').val();
+                    var regex3 = new RegExp("^.{1,30}$"); 
+                    var Comment = $('#Comment').val();
+                    
+                    var submit = $('#submit');
+
+                    if ((Month == "" || (regex1.test(Month) == false) || (Sum == "") || (regex2.test(Sum) == false)|| (Comment == "") || (Day == "") || (regex.test(Day) == false)) )  {
+
+                        submit.prop('disabled', true);
+                    }
+                    else {
+                        submit.prop('disabled', false);
+                    }
+                }</script>
+
+            @Scripts.Render("~/scripts/jquery-3.3.1.min.js")
+            @Scripts.Render("~/scripts/jquery.validate.min.js")
+            @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+
+            @using (Html.BeginForm())
+        {
+
+
+        <p>
+            @Html.LabelFor(model => model.Day, "День")
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Day, new { htmlAttributes = new { onchange = "checkForm()" } })
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Month, "Месяц")
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Month, new { htmlAttributes = new { onchange = "checkForm()" } })
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Sum, "Сумма")
+        </p>
+        <p>
+            @Html.EditorFor(model => model.Sum, new { htmlAttributes = new { onchange = "checkForm()" } })
+        </p>
+
+        <p>
+            @Html.LabelFor(model => model.Comment, "Комментарий")
+        </p>
+
+        <p>
+            @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { onchange = "checkForm()" } })
+        </p>
+
+        <p>
+            <input id="submit" type="submit" value="Добавить" />
+        </p>
+}
+        </div>
+</body>

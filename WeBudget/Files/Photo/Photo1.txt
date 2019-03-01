@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Photo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1</Id>
+  <Day>9</Day>
+  <Month>12</Month>
+  <Sum>666</Sum>
+  <Comment>рр</Comment>
+  <UserId>0</UserId>
+</Photo>
